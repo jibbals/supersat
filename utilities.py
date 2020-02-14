@@ -187,8 +187,8 @@ def resize_image(img, res=(160,160), interp = Image.BILINEAR):
     return (Image.fromarray(img).resize(res, interp))
     
 
-def compare_two_images(img1,img2):
-    f,axes = plt.subplots(2,1,figsize=[13,14])
+def compare_two_images(img1,img2,nrows=1,ncols=2,figsize=[18,14]):
+    f,axes = plt.subplots(nrows,ncols,figsize=figsize)
     
     for i,img in enumerate([img1,img2]):
         plt.sca(axes[i])
